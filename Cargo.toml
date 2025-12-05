@@ -3,6 +3,7 @@ name = "henimiya-os"
 version = "0.1.0"
 
 [dependencies]
+bootloader = "0.9"
 
 [profile.dev]
 panic = "abort"
