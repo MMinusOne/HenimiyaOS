@@ -1,9 +1,13 @@
 [package]
 name = "henimiya-os"
 version = "0.1.0"
+edition = "2024"
 
 [dependencies]
 bootloader = "0.9"
+volatile = "0.2.6"
+spin = "0.5.2"
+lazy_static = { version = "1.0", features = ["spin_no_std"] }
 
 [profile.dev]
 panic = "abort"
@@ -23,6 +27,6 @@ rustflags = ["-C", "link-args=/ENTRY:_start /SUBSYSTEM:console"]
 rustflags = ["-C", "link-args=-e __start -static -nostartfiles"]
 
 [[bin]]
-name = "henimiya_os"
-test = false 
+name = "henimiya-os"
+test = false
 bench = false
