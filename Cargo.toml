@@ -28,5 +28,5 @@ rustflags = ["-C", "link-args=-e __start -static -nostartfiles"]
 
 [[bin]]
 name = "henimiya-os"
-test = false
+test = true
 bench = false
